@@ -1,0 +1,56 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<odoo>
+
+    <!--tree-->
+    <record id="view_teacher_tree" model="ir.ui.view">
+        <field name="name">teacher.academy.tree</field>
+        <field name="model">teacher.academy</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+<!--                <field name="course"/>-->
+                <field name="gender"/>
+                <field name="teachers_course"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!--form -->
+    <record id="view_teacher_form" model="ir.ui.view">
+        <field name="name">teacher.academy.form</field>
+        <field name="model">teacher.academy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <group>
+                        <group>
+                            <field name="name"/>
+<!--                            <field name="course"/>-->
+                        </group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="teachers_course"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="view_teacher_action" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">teacher.academy</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_no content_smiling_face">
+                Welcome School Management System !!!
+                create your first Teacher Record
+            </p>
+        </field>
+    </record>
+</odoo>

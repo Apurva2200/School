@@ -1,0 +1,30 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<odoo>
+
+
+<!--Menu Operations -->
+
+    <menuitem id="academy_root"
+              name="Academy"
+              sequence="10"/>
+
+    <menuitem id="student_academy_root"
+              name="Students"
+              parent="academy_root"
+              action="view_student_action"
+              sequence="1"/>
+
+
+        <menuitem id="course_academy_root"
+                  name="Courses"
+                  parent="academy_root"
+                  action="view_course_action"
+                  sequence="2"/>
+
+     <menuitem id="teacher_academy_root"
+                  name="Teachers"
+                  parent="academy_root"
+                  action="view_teacher_action"
+                  sequence="3"/>
+
+</odoo>
